@@ -1,14 +1,14 @@
 {
   "site": {
-    "title": "Bookworm Light Astro | Blog Template",
-    "base_url": "https://bookworm-light-astro.vercel.app",
+    "title": "The Wise Otter | AI Math Tutor",
+    "base_url": "https://thewiseotter.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_width": "200",
     "logo_height": "34",
-    "logo_text": "Bookworm Light"
+    "logo_text": "The Wise Otter"
   },
 
   "settings": {
@@ -17,14 +17,14 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Jo",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Bookworm Light Astro Blog Template"
+    "meta_description": "Telegram AI math tutor for Singapore students (better than ChatGPT)"
   },
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Copyright © 2025 a theme by [Themefisher](https://themefisher.com)"
+    "copyright": "Written in Singapore"
   },
 
   "contactinfo": {
