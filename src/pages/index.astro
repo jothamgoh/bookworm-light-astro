@@ -1,22 +1,62 @@
 ---
-import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
-import Pagination from "@/layouts/components/Pagination.astro";
-import Posts from "@/layouts/Posts.astro";
+import { Image } from "astro:assets";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
+import config from "@/config/config.json";
 
+// Get featured posts for the landing page
 const posts = await getSinglePage("posts");
 const sortedPosts = sortByDate(posts);
-const totalPages = Math.ceil(posts.length / config.settings.pagination);
-const currentPosts = sortedPosts.slice(0, config.settings.pagination);
+const featuredPosts = sortedPosts.slice(0, 3);
 ---
 
-<Base>
-  <section class="section">
+<Base title="Home">
+  <section class="section pt-14">
     <div class="container">
-      <Posts posts={currentPosts} className="mb-16" />
-      <Pagination currentPage={1} totalPages={totalPages} />
+      <div class="row justify-center">
+        <div class="mb-16 text-center lg:col-7">
+          <h1 class="mb-4 text-h1 lg:text-[55px]">Welcome to Bookworm Light</h1>
+          <p class="text-lg">A clean and minimal Astro blog theme focused on readability and user experience.</p>
+          <a href="/blog" class="btn btn-primary mt-6">Read Our Blog</a>
+        </div>
+      </div>
+      
+      <!-- Featured Posts Section -->
+      <div class="row justify-center">
+        <div class="lg:col-10">
+          <h2 class="section-title mb-8 text-center">Featured Posts</h2>
+          <div class="row">
+            {featuredPosts.map((post) => (
+              <div class="mb-8 md:col-6 lg:col-4">
+                <article class="bg-body dark:bg-darkmode-body rounded-lg shadow-lg h-full">
+                  {post.data.image && (
+                    <Image
+                      class="rounded-t-lg w-full"
+                      src={post.data.image}
+                      alt={post.data.title}
+                      width={445}
+                      height={230}
+                    />
+                  )}
+                  <div class="p-6">
+                    <h3 class="h5 mb-2">
+                      <a href={`/blog/${post.slug}`} class="block hover:text-primary">
+                        {post.data.title}
+                      </a>
+                    </h3>
+                    <p class="text-sm line-clamp-2">{post.data.description}</p>
+                    <a href={`/blog/${post.slug}`} class="btn btn-outline-primary btn-sm mt-4">Read More</a>
+                  </div>
+                </article>
+              </div>
+            ))}
+          </div>
+          <div class="text-center mt-6">
+            <a href="/blog" class="btn btn-outline-primary">View All Posts</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </Base>

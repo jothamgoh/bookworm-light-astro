@@ -28,15 +28,15 @@ But it’s different when you feel like you’re on a quest, working toward some
 
 Your why could be simple, like:
 
-“I want to do well in math to impress my crush and maybe get together with them.” 
+> “I want to do well in math to impress my crush and maybe get together with them.” 
 
-Or it could be something bigger, like “I’ll study so I can earn enough money to support myself and my future family.”
+Or it could be something bigger, like:
 
-Whatever it is, think hard to find a reason that feels real to you—something you believe deep down.
+> “I’ll study so I can earn enough money to support myself and my future family.”
 
-When you have your why, studying turns into steps toward that goal. 
+Whatever it is, think hard to find a reason that feels real to you—something you believe deep down. 
 
-Maybe you’re working to impress that guy or girl, or setting yourself up for a good future—or both. 
+When you have your why, studying turns into steps toward that goal. Maybe you’re working to impress that guy or girl, or setting yourself up for a good future—or both. 
 
 If you can’t find a why, think about what happens if you don’t study. Realizing you might not earn enough to live the way you want because you didn’t try hard can push you to study without needing extra motivation.
 
